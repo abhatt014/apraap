@@ -1,0 +1,10 @@
+---
+- name: kernel version
+  hosts: all
+  tasks:
+    - name: run command
+      shell: uname -r
+      register: version
+    - name: print version
+      debug:
+        var: version
